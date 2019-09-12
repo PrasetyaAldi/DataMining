@@ -118,6 +118,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#pengertian" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -281,9 +285,57 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        mengukur jarak data
+      </label>
+    
     <a href="./" title="mengukur jarak data" class="md-nav__link md-nav__link--active">
       mengukur jarak data
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pengertian" class="md-nav__link">
+    Pengertian
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#minkowski-distance" class="md-nav__link">
+    Minkowski Distance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manhattan-distance" class="md-nav__link">
+    Manhattan distance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementasi" class="md-nav__link">
+    implementasi
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -295,6 +347,56 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pengertian" class="md-nav__link">
+    Pengertian
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#minkowski-distance" class="md-nav__link">
+    Minkowski Distance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manhattan-distance" class="md-nav__link">
+    Manhattan distance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementasi" class="md-nav__link">
+    implementasi
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -303,7 +405,21 @@
                 
                   <h1>mengukur jarak data</h1>
                 
-                
+                <h4 id="pengertian">Pengertian<a class="headerlink" href="#pengertian" title="Permanent link">&para;</a></h4>
+<p>Disini kita akan belajar cara mengukur jarak data menggunakan beberapa cara atau metode</p>
+<h3 id="minkowski-distance"><em>Minkowski Distance</em><a class="headerlink" href="#minkowski-distance" title="Permanent link">&para;</a></h3>
+<p>Kelompk Minkowski diantaranya adalah Euclidean distance dan Manhattan distance, yang menjadi kasus khusus dari Minkowski distance. Minkowski distance dinyatakan dengan
+$$
+d _ { \operatorname { min } } = ( \ sum _ { i = 1 } ^ { n } | x _ { i } - y _ { i } | ^ { m }  ) ^ { \frac { 1 } { m } } , m \geq 1
+$$</p>
+<h3 id="manhattan-distance"><em>Manhattan distance</em><a class="headerlink" href="#manhattan-distance" title="Permanent link">&para;</a></h3>
+<p>Manhattan distance adalah kasus khsusu dari jarak Minkowski distance pada m = 1. Seperti Minkowski Distance, Manhattan distance sensitif terhadap outlier. BIla ukuran ini digunakan dalam algoritma clustering , bentuk cluster adalah hyper-rectangular. Ukuran ini didefinisikan dengan
+$$
+d _ { \operatorname { man } } = \sum _ { i = 1 } ^ { n } \left| x _ { i } - y _ { i } \right|
+$$</p>
+<h3 id="implementasi">implementasi<a class="headerlink" href="#implementasi" title="Permanent link">&para;</a></h3>
+<p>silahkan implementasinya  <a href="https://github.com/PrasetyaAldi/Penambangan_Data/blob/master/RizaldiFebriAgilPrasetya.ipynb">Disini</a></p>
+<p>disana lengkap dengan codingan dan outputannya</p>
                 
                   
                 
