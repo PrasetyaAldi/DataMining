@@ -2,17 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://prasetyaaldi.github.io/datamining/</loc>
-     <lastmod>2019-11-07</lastmod>
+     <lastmod>2019-11-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://prasetyaaldi.github.io/datamining/StatistikDesc/</loc>
-     <lastmod>2019-11-07</lastmod>
+     <lastmod>2019-11-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://prasetyaaldi.github.io/datamining/MengukurJaral/</loc>
-     <lastmod>2019-11-07</lastmod>
+     <lastmod>2019-11-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
@@ -22,7 +22,12 @@
     </url>
     <url>
      <loc>https://prasetyaaldi.github.io/datamining/Weighted K-Nearest Neighbor/</loc>
-     <lastmod>2019-11-07</lastmod>
+     <lastmod>2019-11-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://prasetyaaldi.github.io/datamining/fuzzycmeans/</loc>
+     <lastmod>2019-11-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
