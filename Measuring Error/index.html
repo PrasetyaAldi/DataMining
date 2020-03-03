@@ -13,6 +13,8 @@
         <meta name="description" content="Repository Matakuliah Data Mining">
       
       
+        <link rel="canonical" href="https://prasetyaaldi.github.io/datamining/Measuring Error/">
+      
       
         <meta name="author" content="Rizaldi Febri Agil Prasetya">
       
@@ -35,18 +37,18 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="/datamining/assets/images/favicon.png">
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
     
     
       
-        <title>Rizaldi Febri Agil Prasetya</title>
+        <title>Measuring Error - Rizaldi Febri Agil Prasetya</title>
       
     
     
-      <link rel="stylesheet" href="/datamining/assets/stylesheets/application.30686662.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
       
-        <link rel="stylesheet" href="/datamining/assets/stylesheets/application-palette.a8b3c06d.css">
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
       
         
@@ -55,7 +57,7 @@
       
     
     
-      <script src="/datamining/assets/javascripts/modernizr.74668098.js"></script>
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
@@ -64,9 +66,9 @@
         <style>body,input{font-family:"Times New Roman","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"ubuntu Mono","Courier New",Courier,monospace}</style>
       
     
-    <link rel="stylesheet" href="/datamining/assets/fonts/material-icons.css">
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
     
-      <link rel="manifest" href="/datamining/manifest.webmanifest">
+      <link rel="manifest" href="../manifest.webmanifest">
     
     
     
@@ -116,6 +118,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#measuring-error" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -138,7 +144,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                
+                Measuring Error
               
             </span>
           
@@ -206,7 +212,9 @@
       
         
 
-<nav class="md-tabs" data-md-component="tabs">
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
@@ -215,7 +223,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="/datamining/StatistikDesc/" class="md-tabs__link">
+        <a href="../StatistikDesc/" class="md-tabs__link">
           Penambangan Data
         </a>
       
@@ -228,7 +236,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="/datamining/Measuring Error/" class="md-tabs__link">
+        <a href="./" class="md-tabs__link md-tabs__link--active">
           Komputasi Numerik
         </a>
       
@@ -241,7 +249,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="/datamining/." class="md-tabs__link">
+        <a href=".." class="md-tabs__link">
           About Me
         </a>
       
@@ -317,7 +325,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/datamining/StatistikDesc/" title="statistik deskriptif" class="md-nav__link">
+    <a href="../StatistikDesc/" title="statistik deskriptif" class="md-nav__link">
       statistik deskriptif
     </a>
   </li>
@@ -329,7 +337,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/datamining/MengukurJaral/" title="mengukur jarak data" class="md-nav__link">
+    <a href="../MengukurJaral/" title="mengukur jarak data" class="md-nav__link">
       mengukur jarak data
     </a>
   </li>
@@ -341,7 +349,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/datamining/featureselection.md" title="feature selection" class="md-nav__link">
+    <a href="../featureselection.md" title="feature selection" class="md-nav__link">
       feature selection
     </a>
   </li>
@@ -353,7 +361,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/datamining/Weighted K-Nearest Neighbor/" title="weight KNN" class="md-nav__link">
+    <a href="../Weighted K-Nearest Neighbor/" title="weight KNN" class="md-nav__link">
       weight KNN
     </a>
   </li>
@@ -365,7 +373,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/datamining/fuzzy_c_means/" title="fuzzy_c_means" class="md-nav__link">
+    <a href="../fuzzy_c_means/" title="fuzzy_c_means" class="md-nav__link">
       fuzzy_c_means
     </a>
   </li>
@@ -380,10 +388,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       Komputasi Numerik
@@ -399,11 +409,90 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="/datamining/Measuring Error/" title="Measuring Error" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Measuring Error
+      </label>
+    
+    <a href="./" title="Measuring Error" class="md-nav__link md-nav__link--active">
       Measuring Error
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-round-of-error" class="md-nav__link">
+    1. Round of Error
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-truncation-error" class="md-nav__link">
+    2. Truncation Error
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#true-error" class="md-nav__link">
+    True Error
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relative-true-error" class="md-nav__link">
+    Relative True Error
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apporixmateerror" class="md-nav__link">
+    ApporixmateError
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relative-approximateerror" class="md-nav__link">
+    Relative ApproximateError
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -437,7 +526,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/datamining/." title="Rizaldi Febri Agil Prasetya" class="md-nav__link">
+    <a href=".." title="Rizaldi Febri Agil Prasetya" class="md-nav__link">
       Rizaldi Febri Agil Prasetya
     </a>
   </li>
@@ -455,12 +544,124 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-round-of-error" class="md-nav__link">
+    1. Round of Error
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-truncation-error" class="md-nav__link">
+    2. Truncation Error
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#true-error" class="md-nav__link">
+    True Error
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relative-true-error" class="md-nav__link">
+    Relative True Error
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apporixmateerror" class="md-nav__link">
+    ApporixmateError
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relative-approximateerror" class="md-nav__link">
+    Relative ApproximateError
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
-  <h1>404 - Not found</h1>
-
+                
+                
+                <h1 id="measuring-error">Measuring Error<a class="headerlink" href="#measuring-error" title="Permanent link">&para;</a></h1>
+<p>​   Kesalahan dalam memecahkan suatu teknik atau ilmu masalah bisa timbul karena beberapa faktor. Pertama, kesalahan mungkin dalam teknik pemodelan. Sebuah model matematika mungkin didasarkan pada menggunakan asumsi yang tidak dapat diterima. Sebagai contoh, seseorang dapat berasumsi bahwa gaya memindahkan gigi pada mobil sebanding dengan kecepatan mobil, tapi sebenarnya itu adalah sebanding dengan kuadrat dari kecepatan mobil.
+Ini sendiri dapat membuat kesalahan besar dalam menentukan performa mobil, tidak peduli seberapa akurat metode numerik Anda dapat menggunakan yang. Kedua, kesalahan mungkin timbul dari kesalahan dalam program sendiri atau dalam pengukuran kuantitas fisik. Tapi, dalam aplikasi metode numerik sendiri, dua kesalahan kita harus fokus pada adalah :</p>
+<h4 id="1-round-of-error">1. Round of Error<a class="headerlink" href="#1-round-of-error" title="Permanent link">&para;</a></h4>
+<p>​   Round off error merupakan sebutan untuk kesalahan pembulatan. Dalam perhitungan angka-angka yang terdiri dari angka atau digit non bulat (pecahan) sulit untuk kita pastikan bahwa nilai itu eksak atau benar adanya. dalam perhitungan menggunakan approxsimasi, pastilah perhitungan tersebut memiliki suatu round off error (kesalahan pembulatan). saat kita memutuskan untuk menggunakan nilai approsimasi, sudah pasti kita memiliki nikai ROE ini. Pada nilai nilai yang sudah di tetapkan seperti π, e, atau √ 7 , meskipun memiliki nilai ketetapan, tapi sesungguhnya nilai-nilai tersebut memiliki round off error yang pasti.</p>
+<h4 id="2-truncation-error">2. Truncation Error<a class="headerlink" href="#2-truncation-error" title="Permanent link">&para;</a></h4>
+<p>​   Kesalahan pemotongan terjadi ketika suatu rumus komputasi disederhanakan dengan cara membuang suku yang berderajat tinggi.</p>
+<p><img alt="truncation error" src="https://d4anm2017b.files.wordpress.com/2017/09/truncation-error.png?w=306&amp;h=59" /><img alt="Picture1" src="https://d4anm2017b.files.wordpress.com/2017/09/picture1.png?w=712" /><img alt="Picture2" src="https://d4anm2017b.files.wordpress.com/2017/09/picture2.png?w=712" /></p>
+<ul>
+<li>
+<h6 id="true-error">True Error<a class="headerlink" href="#true-error" title="Permanent link">&para;</a></h6>
+</li>
+</ul>
+<p>​ Didefinisikan sebagai beda antara nilai eksak dalam penghitungan dan pendekatan menggunakan metode numerik.<img alt="Capture1.JPG" src="https://d4anm2017b.files.wordpress.com/2017/09/capture1.jpg?w=712" /></p>
+<ul>
+<li>
+<h6 id="relative-true-error">Relative True Error<a class="headerlink" href="#relative-true-error" title="Permanent link">&para;</a></h6>
+</li>
+</ul>
+<p>​ Didefinisikan sebagai rasio antara nilai kesalahan eksak dan nilai eksak.<img alt="Relative True Error" src="https://d4anm2017b.files.wordpress.com/2017/09/relative-true-error.png?w=712" /></p>
+<ul>
+<li>
+<h6 id="apporixmateerror">ApporixmateError<a class="headerlink" href="#apporixmateerror" title="Permanent link">&para;</a></h6>
+</li>
+<li>
+<p>​   Kesalahan perkiraan didefinisikan sebagai beda antara nilai perkiraan sekarang (ke-n) beda antara nilai perkiraan sekarang (ke-n) dengan nilai perkiraan sebelumnya (ke-(n-1)).</p>
+<p><img alt="Capture2" src="https://d4anm2017b.files.wordpress.com/2017/09/capture2.jpg?w=712" /></p>
+</li>
+<li>
+<h6 id="relative-approximateerror">Relative ApproximateError<a class="headerlink" href="#relative-approximateerror" title="Permanent link">&para;</a></h6>
+</li>
+<li>
+<p>Didefinisikan sebagai rasio antara kesalahan perkiraan dan nilai perkiraan ke-n.</p>
+<p><img alt="Kesalahan perkiraan relatif" src="https://d4anm2017b.files.wordpress.com/2017/09/kesalahan-perkiraan-relatif.png?w=712" /></p>
+</li>
+</ul>
+                
+                  
+                
+              
               
                 
 
@@ -473,6 +674,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../fuzzy_c_means/" title="fuzzy_c_means" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                fuzzy_c_means
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href=".." title="Rizaldi Febri Agil Prasetya" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Rizaldi Febri Agil Prasetya
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -490,7 +726,7 @@
       </div>
       
   <div class="md-footer-social">
-    <link rel="stylesheet" href="/datamining/assets/fonts/font-awesome.css">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
     
       <a href="https://github.com/PrasetyaAldi/" class="md-footer-social__link fa fa-github"></a>
     
@@ -502,9 +738,9 @@
       
     </div>
     
-      <script src="/datamining/assets/javascripts/application.c648116f.js"></script>
+      <script src="../assets/javascripts/application.c648116f.js"></script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:"/datamining/"}})</script>
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
     
   </body>
