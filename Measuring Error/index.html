@@ -485,6 +485,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#listing-program-untuk-maclaurin" class="md-nav__link">
+    Listing Program untuk MACLAURIN
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hasil-output" class="md-nav__link">
+    Hasil Output
+  </a>
+  
+</li>
+      
       
       
       
@@ -605,6 +619,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#listing-program-untuk-maclaurin" class="md-nav__link">
+    Listing Program untuk MACLAURIN
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hasil-output" class="md-nav__link">
+    Hasil Output
+  </a>
+  
+</li>
+      
       
       
       
@@ -658,6 +686,129 @@ Ini sendiri dapat membuat kesalahan besar dalam menentukan performa mobil, tidak
 <p><img alt="Kesalahan perkiraan relatif" src="https://d4anm2017b.files.wordpress.com/2017/09/kesalahan-perkiraan-relatif.png?w=712" /></p>
 </li>
 </ul>
+<blockquote>
+<h3 id="listing-program-untuk-maclaurin">Listing Program untuk MACLAURIN<a class="headerlink" href="#listing-program-untuk-maclaurin" title="Permanent link">&para;</a></h3>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;masukkan Nilai X : &quot;</span><span class="p">))</span>
+<span class="n">coba</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="n">coba</span> <span class="o">&gt;</span> <span class="mf">0.0001</span><span class="p">:</span>
+    <span class="n">f_x</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">f_y</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+        <span class="n">f_x</span> <span class="o">+=</span> <span class="p">(</span><span class="mi">3</span><span class="o">**</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="n">i</span><span class="o">/</span><span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
+        <span class="n">f_y</span> <span class="o">+=</span> <span class="p">(</span><span class="mi">3</span><span class="o">**</span><span class="n">j</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="n">j</span><span class="o">/</span><span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;suku ke&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s2">&quot;=&quot;</span><span class="p">,</span> <span class="n">f_x</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;suku ke&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="s2">&quot;=&quot;</span><span class="p">,</span> <span class="n">f_y</span><span class="p">)</span>
+
+    <span class="n">coba</span> <span class="o">=</span> <span class="n">f_y</span><span class="o">-</span><span class="n">f_x</span>
+    <span class="n">a</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">b</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;selisih = &quot;</span><span class="p">,</span> <span class="n">coba</span><span class="p">)</span>
+</pre></div>
+
+
+<blockquote>
+<h3 id="hasil-output">Hasil Output<a class="headerlink" href="#hasil-output" title="Permanent link">&para;</a></h3>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="n">C</span><span class="p">:</span>\<span class="n">Kuliah</span>\<span class="n">KomputasiNumerik</span><span class="o">&gt;</span><span class="n">python</span> <span class="n">cobakTugas1</span><span class="o">.</span><span class="n">py</span>
+<span class="n">masukkan</span> <span class="n">Nilai</span> <span class="n">X</span> <span class="p">:</span> <span class="mi">3</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">0</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">1</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">selisih</span> <span class="o">=</span>  <span class="mf">1.0</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">1</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">2</span> <span class="o">=</span> <span class="mf">10.0</span>
+<span class="n">selisih</span> <span class="o">=</span>  <span class="mf">9.0</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">2</span> <span class="o">=</span> <span class="mf">10.0</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">3</span> <span class="o">=</span> <span class="mf">50.5</span>
+<span class="n">selisih</span> <span class="o">=</span>  <span class="mf">40.5</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">3</span> <span class="o">=</span> <span class="mf">50.5</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">4</span> <span class="o">=</span> <span class="mf">172.0</span>
+<span class="n">selisih</span> <span class="o">=</span>  <span class="mf">121.5</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">4</span> <span class="o">=</span> <span class="mf">172.0</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">5</span> <span class="o">=</span> <span class="mf">445.375</span>
+<span class="n">selisih</span> <span class="o">=</span>  <span class="mf">273.375</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">5</span> <span class="o">=</span> <span class="mf">445.375</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">6</span> <span class="o">=</span> <span class="mf">937.45</span>
+<span class="n">selisih</span> <span class="o">=</span>  <span class="mf">492.07500000000005</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">6</span> <span class="o">=</span> <span class="mf">937.45</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">7</span> <span class="o">=</span> <span class="mf">1675.5625</span>
+<span class="n">selisih</span> <span class="o">=</span>  <span class="mf">738.1125</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">7</span> <span class="o">=</span> <span class="mf">1675.5625</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">8</span> <span class="o">=</span> <span class="mf">2624.5642857142857</span>
+<span class="n">selisih</span> <span class="o">=</span>  <span class="mf">949.0017857142857</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">8</span> <span class="o">=</span> <span class="mf">2624.5642857142857</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">9</span> <span class="o">=</span> <span class="mf">3692.1912946428574</span>
+<span class="n">selisih</span> <span class="o">=</span>  <span class="mf">1067.6270089285717</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">9</span> <span class="o">=</span> <span class="mf">3692.1912946428574</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">10</span> <span class="o">=</span> <span class="mf">4759.818303571429</span>
+<span class="n">selisih</span> <span class="o">=</span>  <span class="mf">1067.6270089285717</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">10</span> <span class="o">=</span> <span class="mf">4759.818303571429</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">11</span> <span class="o">=</span> <span class="mf">5720.682611607143</span>
+<span class="n">selisih</span> <span class="o">=</span>  <span class="mf">960.8643080357142</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">11</span> <span class="o">=</span> <span class="mf">5720.682611607143</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">12</span> <span class="o">=</span> <span class="mf">6506.844318181818</span>
+<span class="n">selisih</span> <span class="o">=</span>  <span class="mf">786.161706574675</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">12</span> <span class="o">=</span> <span class="mf">6506.844318181818</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">13</span> <span class="o">=</span> <span class="mf">7096.465598112825</span>
+<span class="n">selisih</span> <span class="o">=</span>  <span class="mf">589.6212799310069</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">13</span> <span class="o">=</span> <span class="mf">7096.465598112825</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">14</span> <span class="o">=</span> <span class="mf">7504.6649457573685</span>
+<span class="n">selisih</span> <span class="o">=</span>  <span class="mf">408.1993476445432</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">14</span> <span class="o">=</span> <span class="mf">7504.6649457573685</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">15</span> <span class="o">=</span> <span class="mf">7767.078812100289</span>
+<span class="n">selisih</span> <span class="o">=</span>  <span class="mf">262.4138663429203</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">15</span> <span class="o">=</span> <span class="mf">7767.078812100289</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">16</span> <span class="o">=</span> <span class="mf">7924.527131906041</span>
+<span class="n">selisih</span> <span class="o">=</span>  <span class="mf">157.44831980575236</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">16</span> <span class="o">=</span> <span class="mf">7924.527131906041</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">17</span> <span class="o">=</span> <span class="mf">8013.091811796777</span>
+<span class="n">selisih</span> <span class="o">=</span>  <span class="mf">88.56467989073553</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">17</span> <span class="o">=</span> <span class="mf">8013.091811796777</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">18</span> <span class="o">=</span> <span class="mf">8059.978995268342</span>
+<span class="n">selisih</span> <span class="o">=</span>  <span class="mf">46.88718347156555</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">18</span> <span class="o">=</span> <span class="mf">8059.978995268342</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">19</span> <span class="o">=</span> <span class="mf">8083.4225870041255</span>
+<span class="n">selisih</span> <span class="o">=</span>  <span class="mf">23.44359173578323</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">19</span> <span class="o">=</span> <span class="mf">8083.4225870041255</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">20</span> <span class="o">=</span> <span class="mf">8094.527446247391</span>
+<span class="n">selisih</span> <span class="o">=</span>  <span class="mf">11.10485924326531</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">20</span> <span class="o">=</span> <span class="mf">8094.527446247391</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">21</span> <span class="o">=</span> <span class="mf">8099.5246329068605</span>
+<span class="n">selisih</span> <span class="o">=</span>  <span class="mf">4.997186659469662</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">21</span> <span class="o">=</span> <span class="mf">8099.5246329068605</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">22</span> <span class="o">=</span> <span class="mf">8101.6662843323475</span>
+<span class="n">selisih</span> <span class="o">=</span>  <span class="mf">2.141651425486998</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">22</span> <span class="o">=</span> <span class="mf">8101.6662843323475</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">23</span> <span class="o">=</span> <span class="mf">8102.542414460956</span>
+<span class="n">selisih</span> <span class="o">=</span>  <span class="mf">0.8761301286085654</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">23</span> <span class="o">=</span> <span class="mf">8102.542414460956</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">24</span> <span class="o">=</span> <span class="mf">8102.885247989542</span>
+<span class="n">selisih</span> <span class="o">=</span>  <span class="mf">0.34283352858619764</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">24</span> <span class="o">=</span> <span class="mf">8102.885247989542</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">25</span> <span class="o">=</span> <span class="mf">8103.013810562762</span>
+<span class="n">selisih</span> <span class="o">=</span>  <span class="mf">0.12856257321982412</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">25</span> <span class="o">=</span> <span class="mf">8103.013810562762</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">26</span> <span class="o">=</span> <span class="mf">8103.060093089121</span>
+<span class="n">selisih</span> <span class="o">=</span>  <span class="mf">0.04628252635939134</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">26</span> <span class="o">=</span> <span class="mf">8103.060093089121</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">27</span> <span class="o">=</span> <span class="mf">8103.076113963631</span>
+<span class="n">selisih</span> <span class="o">=</span>  <span class="mf">0.016020874509194982</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">27</span> <span class="o">=</span> <span class="mf">8103.076113963631</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">28</span> <span class="o">=</span> <span class="mf">8103.081454255133</span>
+<span class="n">selisih</span> <span class="o">=</span>  <span class="mf">0.005340291502761829</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">28</span> <span class="o">=</span> <span class="mf">8103.081454255133</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">29</span> <span class="o">=</span> <span class="mf">8103.083170777402</span>
+<span class="n">selisih</span> <span class="o">=</span>  <span class="mf">0.0017165222689072834</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">29</span> <span class="o">=</span> <span class="mf">8103.083170777402</span>
+<span class="n">suku</span> <span class="n">ke</span> <span class="mi">30</span> <span class="o">=</span> <span class="mf">8103.08370349121</span>
+<span class="n">selisih</span> <span class="o">=</span>  <span class="mf">0.0005327138078428106</span>
+</pre></div>
                 
                   
                 
