@@ -1,0 +1,875 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Repository Matakuliah Data Mining">
+      
+      
+        <link rel="canonical" href="https://prasetyaaldi.github.io/datamining/StatistikDesc/">
+      
+      
+        <meta name="author" content="Rizaldi Febri Agil Prasetya">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
+    
+    
+      
+        <title>statistik deskriptif - Rizaldi Febri Agil Prasetya</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Times+New+Roman:300,400,400i,700|ubuntu+Mono&display=fallback">
+        <style>body,input{font-family:"Times New Roman","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"ubuntu Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+      <link rel="manifest" href="../manifest.webmanifest">
+    
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-XXXXXXXX-X", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="black" data-md-color-accent="cyan">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#ukuran-kecenderungan-terpusat" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://prasetyaaldi.github.io/datamining/" title="Rizaldi Febri Agil Prasetya" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Rizaldi Febri Agil Prasetya
+            </span>
+            <span class="md-header-nav__topic">
+              
+                statistik deskriptif
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://prasetyaaldi.github.io/datamining/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    Rizaldi Febri Agil Prasetya
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="./" class="md-tabs__link md-tabs__link--active">
+          Penambangan Data
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../MeasuringError/" class="md-tabs__link">
+          Komputasi Numerik
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href=".." class="md-tabs__link">
+          About Me
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://prasetyaaldi.github.io/datamining/" title="Rizaldi Febri Agil Prasetya" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Rizaldi Febri Agil Prasetya
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://prasetyaaldi.github.io/datamining/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    Rizaldi Febri Agil Prasetya
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      Penambangan Data
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Penambangan Data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        statistik deskriptif
+      </label>
+    
+    <a href="./" title="statistik deskriptif" class="md-nav__link md-nav__link--active">
+      statistik deskriptif
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ukuran-kecenderungan-terpusat" class="md-nav__link">
+    Ukuran Kecenderungan Terpusat
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meanrata-rata" class="md-nav__link">
+    Mean(Rata-Rata)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#median-nilai-tengah" class="md-nav__link">
+    Median (Nilai Tengah)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rentang-range-quartil-and-rentang-interquartile" class="md-nav__link">
+    Rentang (Range), Quartil, and Rentang Interquartile¶
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variansi-dan-standar-deviasi" class="md-nav__link">
+    Variansi dan Standar Deviasi¶
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#skewness" class="md-nav__link">
+    Skewness¶
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementasi" class="md-nav__link">
+    implementasi¶
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MengukurJaral/" title="mengukur jarak data" class="md-nav__link">
+      mengukur jarak data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../featureselection.md" title="feature selection" class="md-nav__link">
+      feature selection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Weighted K-Nearest Neighbor/" title="weight KNN" class="md-nav__link">
+      weight KNN
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fuzzy_c_means/" title="fuzzy_c_means" class="md-nav__link">
+      fuzzy_c_means
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Komputasi Numerik
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Komputasi Numerik
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MeasuringError/" title="Measuring Error" class="md-nav__link">
+      Measuring Error
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../NumericalSolution/" title="Numerical Solution" class="md-nav__link">
+      Numerical Solution
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../gaus/" title="Elimination Gauss" class="md-nav__link">
+      Elimination Gauss
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      About Me
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        About Me
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Rizaldi Febri Agil Prasetya" class="md-nav__link">
+      Rizaldi Febri Agil Prasetya
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ukuran-kecenderungan-terpusat" class="md-nav__link">
+    Ukuran Kecenderungan Terpusat
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meanrata-rata" class="md-nav__link">
+    Mean(Rata-Rata)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#median-nilai-tengah" class="md-nav__link">
+    Median (Nilai Tengah)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rentang-range-quartil-and-rentang-interquartile" class="md-nav__link">
+    Rentang (Range), Quartil, and Rentang Interquartile¶
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variansi-dan-standar-deviasi" class="md-nav__link">
+    Variansi dan Standar Deviasi¶
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#skewness" class="md-nav__link">
+    Skewness¶
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementasi" class="md-nav__link">
+    implementasi¶
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>statistik deskriptif</h1>
+                
+                <h4 id="ukuran-kecenderungan-terpusat"><strong>Ukuran Kecenderungan Terpusat</strong><a class="headerlink" href="#ukuran-kecenderungan-terpusat" title="Permanent link">&para;</a></h4>
+<h4 id="meanrata-rata">Mean(Rata-Rata)<a class="headerlink" href="#meanrata-rata" title="Permanent link">&para;</a></h4>
+<p>Psada bagian ini, kami melihat cara untuk mengukur kecenderungan pusat data. Misalkan kita mempunyai atribut hasil pretest yang dinyatakan dengan atribut X. Misalkan x1,x2,...,xNx1,x2,...,xN menjadi himpunan nilai N yang diamati atau pengamatan untuk X. Di sini, nilai-nilai ini juga dapat disebut set data (untuk X). Jika kita merencanakan pengamatan untuk nilai pretest, di mana sebagian besar nilai berada? Ini memberi kita gambaran tentang kecenderungan pusat dari data. Ukuran kecenderungan pusat data ukurannya adalah rata-rata(mean), median, modus (mode), dan midrange. Atribut numerik yang paling umum dan efektif dari "pusat" dari set data adalah mean (aritmatika). Misalkan x1,x2,...,xNx1,x2,...,xN menjadi satu set nilai N atau pengamatan, Rata-rata dari nilai pretes dinyatakan dengan</p>
+<p>$$
+\bar{x}=\frac{\sum_{i=1}^{N} x_{i}}{N}=\frac{x_{1}+x_{2}+\cdots+x_{N}}{N}
+$$
+``</p>
+<p>Kadang-kadang, setiap nilai xixi dalam satu data dapat dikaitkan dengan bobot wiwi untuk i=1,..,Ni=1,..,N. Bobot tersebut mencerminkan signifikansi, kepentingan, atau frekuensi kejadian yang melekat pada masing masing nilai. Dalam hal ini, kita dapat menghitungnya dengan</p>
+<p>$$
+\overline{x}=\frac{\sum_{i=1}^{N} w_{i} x_{i}}{\sum_{i=1}^{N} w_{i}}=\frac{w_{1} x_{1}+w_{2} x_{2}+\cdots+w_{N} x_{N}}{w_{1}+w_{2}+\cdots+w_{N}}
+$$</p>
+<p>Meskipun rata-rata adalah jumlah yang sangat berguna untuk menggambarkan kumpulan data, itu tidak selalu cara terbaik untuk mengukur pusat data. Masalah utama dengan mean adalah sensitivitasnya terhadap nilai ekstrim (mis., outlier). Bahkan beberapa nilai ekstrem saja dapat merusak mean. Misalnya, gaji rata-rata di suatu perusahaan mungkin sangat besar didorong oleh beberapa manajer bergaji tinggi. Demikian pula, nilai rata-rata kelas di ujian dapat rata-rata rendah karena beberapa ada beberap skor nilai saja yang sangat rendah. Untuk mengimbangi efek tersebut kita bisa menggunakan rata-rata yang dipangkas (trimmed mean), yang merupakan rata-rata yang diperoleh setelah memangkas nilai paling tinggi dan nilai yang paling rendah. Untuk contoh, kita dapat mengurutkan nilai gaji yang diamati kemudian menghapus 2% atas dan bawah nilai tersebut sebelum menghitung mean. Kita harus menghindari pemotongan bagian yang terlalu besar (seperti 20%) pada kedua ujungnya, karena hal ini dapat mengakibatkan hilangnya informasi yang berharga)</p>
+<h4 id="median-nilai-tengah">Median (Nilai Tengah)<a class="headerlink" href="#median-nilai-tengah" title="Permanent link">&para;</a></h4>
+<p>Untuk data miring (asimetris), ukuran pusat data yang lebih baik adalah median, yang merupakan nilai tengah dalam satu set nilai data yang diurutkan. Ini adalah nilai yang memisahkan separuh data yang lebih tinggi dari data tersebut dan sebagian data yang lebih rendah dari data tersebut. Dalam probabilitas dan statistik, median umumnya berlaku untuk data numerik; namun, kami dapat memperluas konsep menjadi data ordinal. Misalkan kumpulan N data yang diberikan untuk atribut X diurutkan dalam urutan naik. Jika N ganjil, maka median adalah nilai tengah dari data yang ordinal. Jika N adalah genap, maka mediannya tidak unik; dihitung dengan rata rata dari nilai $$(\frac{N}{2}+1) +(\frac{N}{2}-1) $$</p>
+<p>Namun pada data berkelompok, dengan data yang berbentuk kelas interval, kita tidak bisa langsung mengetahui nilai median jika kelas mediannya sudah diketahui dengan formula</p>
+<p>$$
+M e=x_{i j}+\left(\frac{\frac{n}{2}-f_{k i j}}{f_{i}}\right) p
+$$</p>
+<p>$$
+\begin{array}{l}{M e=\text { median }} \ {x_{i j}=\text { batas bawah median }} \ {n=\text { jumlah data }} \ {f_{k i j}=\text { frekuensi kumulatif data di bawah kelas median }} \ {f_{i}=\text { frekuensi data pada kelas median }} \ {p=\text { panjang interval kelas }}\end{array}
+$$</p>
+<h4 id="rentang-range-quartil-and-rentang-interquartile"><em>Rentang (Range), Quartil, and Rentang Interquartile</em><a href="https://mulaab.github.io/datamining/memahami-data/#rentang-range-quartil-and-rentang-interquartile">¶</a><a class="headerlink" href="#rentang-range-quartil-and-rentang-interquartile" title="Permanent link">&para;</a></h4>
+<p>Misalkan x1,x2,..xNx1,x2,..xN adalah sekumpulan pengamatan untuk atribut numerik, XX. Rentang adalah selisih antara nilai terbesar (maks ()) dan terkecil (min ()). Misalkan data untuk atribut X diurutkan dalam urutan naik.Bagilah data berdasarkan titik titik tertentu sehingga membagi distribusi data ukuran yang sama, seperti pada Gambar dibawah. Titik data ini disebut kuantil. 2-quantile adalah titik data yang membagi bagian bawah dan atas dari distribusi data. Ini sama dengan median. 4-kuantil adalah tiga titik data yang membagi distribusi data menjadi empat bagian yang sama; setiap bagian mewakili seperempat dari distribusi data. Ini lebih sering disebut sebagai kuartil. 100-kuantil lebih sering disebut sebagai persentil; mereka membagi distribusi data menjadi 100 data berukuran sama. Median, kuartil, dan persentil adalah bentuk kuantil yang paling banyak digunakan.</p>
+<p>Kuartil memberikan gambaran pusat distribus, penyebaran, dan bentuk distribusi. Kuartil satu, dilambangkan oleh Q1, adalah persentil ke-25. Nilai ini menunjukan 25% terendah dari data. Kuartil ketiga, dilambangkan oleh Q3, adalah persentil ke-75 - itu memisahkan data 75% dari terendah data (atau 25% dari tertinggi data. Kuartil kedua adalah persentil ke-50 atau median dari distribusi data.</p>
+<h4 id="variansi-dan-standar-deviasi"><em>Variansi dan Standar Deviasi</em><a href="https://mulaab.github.io/datamining/memahami-data/#variansi-dan-standar-deviasi">¶</a><a class="headerlink" href="#variansi-dan-standar-deviasi" title="Permanent link">&para;</a></h4>
+<p>Variansi dan standar deviasi adalah ukuran penyebaran data. Nilai-nilai tersebut menunjukkan bagaimana penyebaran distribusi data. Standar Deviasi yang rendah berarti bahwa pengamatan data cenderung sangat dekat dengan rata-rata, sedangkan deviasi standar yang tinggi menunjukkan data tersebar di sejumlah nilai-nilai besar.</p>
+<p>Varian dari pengamatan 
+$$
+N, x_1, x_2, ..., x_N
+$$
+untuk atribut numerik X adalah
+$$
+\sigma ^ { 2 } = \frac { 1 } { N } \sum _ { i = 1 } ^ { N } ( x _ { i } - \overline { x } ) ^ { 2 } = ( \frac { 1 } { N } \sum _ { i = 1 } ^ { N } x _ { i } ^ { 2 } ) - \overline { x } ^ { 2 }
+$$</p>
+<h3 id="skewness"><em>Skewness</em><a href="https://mulaab.github.io/datamining/memahami-data/#skewness">¶</a><a class="headerlink" href="#skewness" title="Permanent link">&para;</a></h3>
+<p>Derajat distorsi dari kurva lonceng simetris atau distribusi normal. Ini mengukur kurangnya simetri dalam distribusi data Untuk menghitung derajat distorisi dapat menggunakan Koefisien Kemencengan Pearson yang diperoleh dengan menggunakan nilai selisih rata-rata dengan modus dibagi simpangan baku. Koefisien Kemencengan Pearson dirumuskan sebagai berikut
+$$
+s k=\frac{\overline{X}-M o}{s}
+$$
+dengan
+$$
+\overline{X}-M o \approx 3(\overline{X}-M e)
+$$
+maka
+$$
+s k \approx \frac{3(\overline{X}-M e)}{s}
+$$</p>
+<h4 id="implementasi">implementasi<a href="https://github.com/PrasetyaAldi/Penambangan_Data/blob/master/Tugas_1/180411100085_RizaldiFebriAgilPrasetya.ipynb">¶</a><a class="headerlink" href="#implementasi" title="Permanent link">&para;</a></h4>
+<p>silahkan download filenya <a href="https://github.com/PrasetyaAldi/Penambangan_Data/blob/master/Tugas_1/data.csv">disini</a></p>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data.csv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">)</span>
+<span class="n">temp</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;stats&#39;</span><span class="p">:[</span><span class="s1">&#39;Min&#39;</span><span class="p">,</span><span class="s1">&#39;Max&#39;</span><span class="p">,</span><span class="s1">&#39;Mean&#39;</span><span class="p">,</span><span class="s1">&#39;Standard Deviasi&#39;</span><span class="p">,</span><span class="s1">&#39;Variasi&#39;</span><span class="p">,</span><span class="s1">&#39;Skewnes&#39;</span><span class="p">,</span><span class="s1">&#39;Quartile1&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;Quartile2&#39;</span><span class="p">,</span><span class="s1">&#39;Quartile3&#39;</span>
+                 <span class="p">,</span><span class="s1">&#39;Median&#39;</span><span class="p">,</span><span class="s1">&#39;Modus&#39;</span><span class="p">]}</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="n">temp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">df</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="n">df</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">df</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span> <span class="n">df</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">var</span><span class="p">(),</span> 
+               <span class="n">df</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">skew</span><span class="p">(),</span> <span class="n">df</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.25</span><span class="p">),</span> <span class="n">df</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.5</span><span class="p">),</span> 
+               <span class="n">df</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.75</span><span class="p">),</span> <span class="n">df</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">stats</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">.</span><span class="n">mode</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+
+<span class="nb">file</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span>
+<span class="nb">file</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">hide_index</span><span class="p">()</span>
+</pre></div>
+
+
+<table>
+<thead>
+<tr>
+<th>stats</th>
+<th>x1</th>
+<th>x2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Min</td>
+<td>2</td>
+<td>500</td>
+</tr>
+<tr>
+<td>Max</td>
+<td>3</td>
+<td>1000</td>
+</tr>
+<tr>
+<td>Mean</td>
+<td>2.66667</td>
+<td>700</td>
+</tr>
+<tr>
+<td>Standard Deviasi</td>
+<td>0.57735</td>
+<td>264.575</td>
+</tr>
+<tr>
+<td>Variasi</td>
+<td>0.333333</td>
+<td>70000</td>
+</tr>
+<tr>
+<td>Skewness</td>
+<td>-1.73205</td>
+<td>1.45786</td>
+</tr>
+<tr>
+<td>Quartile 1</td>
+<td>2.5</td>
+<td>550</td>
+</tr>
+<tr>
+<td>Quartile 2</td>
+<td>3</td>
+<td>600</td>
+</tr>
+<tr>
+<td>Quartile 3</td>
+<td>3</td>
+<td>800</td>
+</tr>
+<tr>
+<td>Median</td>
+<td>2.66667</td>
+<td>700</td>
+</tr>
+<tr>
+<td>Modus</td>
+<td>3</td>
+<td>500</td>
+</tr>
+</tbody>
+</table>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$$','$$']]}
+});
+</script>
+
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<div class="codehilite"><pre><span></span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+        
+          <a href="../MengukurJaral/" title="mengukur jarak data" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                mengukur jarak data
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 - 2021 Rizaldi Febri Agil Prasetya
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/PrasetyaAldi/" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.c648116f.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

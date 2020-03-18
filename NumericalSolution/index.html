@@ -1,0 +1,1194 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Repository Matakuliah Data Mining">
+      
+      
+        <link rel="canonical" href="https://prasetyaaldi.github.io/datamining/NumericalSolution/">
+      
+      
+        <meta name="author" content="Rizaldi Febri Agil Prasetya">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
+    
+    
+      
+        <title>Numerical Solution - Rizaldi Febri Agil Prasetya</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Times+New+Roman:300,400,400i,700|ubuntu+Mono&display=fallback">
+        <style>body,input{font-family:"Times New Roman","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"ubuntu Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+      <link rel="manifest" href="../manifest.webmanifest">
+    
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-XXXXXXXX-X", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="black" data-md-color-accent="cyan">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#numerical-solution-of-algebraic-and-transcendental-equation" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://prasetyaaldi.github.io/datamining/" title="Rizaldi Febri Agil Prasetya" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Rizaldi Febri Agil Prasetya
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Numerical Solution
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://prasetyaaldi.github.io/datamining/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    Rizaldi Febri Agil Prasetya
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../StatistikDesc/" class="md-tabs__link">
+          Penambangan Data
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../MeasuringError/" class="md-tabs__link md-tabs__link--active">
+          Komputasi Numerik
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href=".." class="md-tabs__link">
+          About Me
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://prasetyaaldi.github.io/datamining/" title="Rizaldi Febri Agil Prasetya" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Rizaldi Febri Agil Prasetya
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://prasetyaaldi.github.io/datamining/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    Rizaldi Febri Agil Prasetya
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      Penambangan Data
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Penambangan Data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../StatistikDesc/" title="statistik deskriptif" class="md-nav__link">
+      statistik deskriptif
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MengukurJaral/" title="mengukur jarak data" class="md-nav__link">
+      mengukur jarak data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../featureselection.md" title="feature selection" class="md-nav__link">
+      feature selection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Weighted K-Nearest Neighbor/" title="weight KNN" class="md-nav__link">
+      weight KNN
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fuzzy_c_means/" title="fuzzy_c_means" class="md-nav__link">
+      fuzzy_c_means
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Komputasi Numerik
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Komputasi Numerik
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MeasuringError/" title="Measuring Error" class="md-nav__link">
+      Measuring Error
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Numerical Solution
+      </label>
+    
+    <a href="./" title="Numerical Solution" class="md-nav__link md-nav__link--active">
+      Numerical Solution
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#numerical-solution-of-algebraic-and-transcendental-equation" class="md-nav__link">
+    Numerical Solution of Algebraic and Transcendental Equation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#penyelesaian-persamaan-non-linier" class="md-nav__link">
+    Penyelesaian persamaan non linier
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metode-tertutup" class="md-nav__link">
+    Metode Tertutup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metode-terbuka" class="md-nav__link">
+    Metode Terbuka
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-bisection" class="md-nav__link">
+    Method Bisection
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementasi-metode-bisection-dalam-python" class="md-nav__link">
+    implementasi metode bisection dalam python
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#method-regula-falsi" class="md-nav__link">
+    method Regula Falsi
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementasi-method-regula-falsi-dalam-python" class="md-nav__link">
+    implementasi method regula falsi dalam python
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metode-newton-raphson" class="md-nav__link">
+    Metode Newton Raphson
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementasi-metode-newton-raphson-python" class="md-nav__link">
+    implementasi Metode Newton Raphson python
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metode-secant" class="md-nav__link">
+    Metode Secant
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formula-secant" class="md-nav__link">
+    formula secant
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algoritma-method-secant" class="md-nav__link">
+    algoritma method secant
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementasi-method-secant-pada-python" class="md-nav__link">
+    implementasi method secant pada python
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../gaus/" title="Elimination Gauss" class="md-nav__link">
+      Elimination Gauss
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      About Me
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        About Me
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Rizaldi Febri Agil Prasetya" class="md-nav__link">
+      Rizaldi Febri Agil Prasetya
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#numerical-solution-of-algebraic-and-transcendental-equation" class="md-nav__link">
+    Numerical Solution of Algebraic and Transcendental Equation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#penyelesaian-persamaan-non-linier" class="md-nav__link">
+    Penyelesaian persamaan non linier
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metode-tertutup" class="md-nav__link">
+    Metode Tertutup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metode-terbuka" class="md-nav__link">
+    Metode Terbuka
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-bisection" class="md-nav__link">
+    Method Bisection
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementasi-metode-bisection-dalam-python" class="md-nav__link">
+    implementasi metode bisection dalam python
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#method-regula-falsi" class="md-nav__link">
+    method Regula Falsi
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementasi-method-regula-falsi-dalam-python" class="md-nav__link">
+    implementasi method regula falsi dalam python
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metode-newton-raphson" class="md-nav__link">
+    Metode Newton Raphson
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementasi-metode-newton-raphson-python" class="md-nav__link">
+    implementasi Metode Newton Raphson python
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metode-secant" class="md-nav__link">
+    Metode Secant
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formula-secant" class="md-nav__link">
+    formula secant
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algoritma-method-secant" class="md-nav__link">
+    algoritma method secant
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementasi-method-secant-pada-python" class="md-nav__link">
+    implementasi method secant pada python
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Numerical Solution</h1>
+                
+                <h2 id="numerical-solution-of-algebraic-and-transcendental-equation"><strong>Numerical Solution of Algebraic and Transcendental Equation</strong><a class="headerlink" href="#numerical-solution-of-algebraic-and-transcendental-equation" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Sistem persaman aljabar dapat diuraikan seperti dibawah ini </li>
+</ul>
+<p><img alt="png" src="https://mohimamwahyudi.github.io/persamaan.png" /></p>
+<p>Persamaan transcendental  : sin, cos, tan,</p>
+<p>Persamaan polynomial  : a0 + a1x + a2x2 ……. + anxn + ……</p>
+<h4 id="penyelesaian-persamaan-non-linier">Penyelesaian persamaan non linier<a class="headerlink" href="#penyelesaian-persamaan-non-linier" title="Permanent link">&para;</a></h4>
+<h6 id="metode-tertutup">Metode Tertutup<a class="headerlink" href="#metode-tertutup" title="Permanent link">&para;</a></h6>
+<ul>
+<li>
+<p>Mencari akar pada range [a,b] tertentu</p>
+</li>
+<li>
+<p>Dalam range[a,b] dipastikan terdapat satu akar</p>
+</li>
+<li>Hasil selalu konvergen → disebut juga metode konvergen</li>
+<li>Contohnya Metode Tabel ,Metode Biseksi,Metode Regula Falsi</li>
+</ul>
+<h6 id="metode-terbuka">Metode Terbuka<a class="headerlink" href="#metode-terbuka" title="Permanent link">&para;</a></h6>
+<ul>
+<li>Diperlukan tebakan awal</li>
+<li>xn dipakai untuk menghitung xn+1</li>
+<li>Hasil dapat konvergen atau divergen</li>
+<li>Contohnya Metode Iterasi Sederhana, Metode Newton-Raphson, Metode Secant.</li>
+</ul>
+<h4 id="method-bisection">Method Bisection<a class="headerlink" href="#method-bisection" title="Permanent link">&para;</a></h4>
+<p><img alt="Image result for algoritma bisection" src="data:image/png;base64,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" /></p>
+<blockquote>
+<p>Metode biseksi ini membagi range menjadi 2 bagian, dari dua bagian ini dipilih bagian mana yang mengandung akar sedangkan bagian yang tidak mengandung akar akan dibuang. Hal ini dilakukan berulang-ulang hingga diperoleh suatu akar persamaan</p>
+</blockquote>
+<p><em>langkah langkah</em></p>
+<ul>
+<li>Tentukan batas bawah (a) dan batas atas (b). Kemudian dihitung nilai tengah :</li>
+</ul>
+<p>$$
+c = {(a+b)\over 2}
+$$</p>
+<ul>
+<li>Dari nilai c ini perlu dilakukan pengecekan keberadaan akar. Secara matematik, suatu range terdapat akar persamaan bila f(a) dan f(b) berlawanan tanda atau dituliskan :</li>
+</ul>
+<p>$$
+f(a).f(b) &lt;0
+$$</p>
+<ul>
+<li>Setelah diketahui di bagian mana terdapat akar, maka batas bawah dan batas atas diperbarui sesuai dengan range dari bagian yang mempunyai akar</li>
+</ul>
+<p><em>algoritma metode bisection</em></p>
+<p>1.Definisikan fungsi f(x) yang akan dicari akarnya</p>
+<p>2.Tentukan nilai a dan b</p>
+<p>3.Tentukan toleransi e dan iterasi maksimum N</p>
+<p>4.Hitung f(a) dan f(b)</p>
+<p>5.Jika f(a).f(b)&gt;0 maka proses dihentikan karena tidak ada akar, bila tidak maka dilanjutkan</p>
+<p>6.Hitung x = (a+b)/2</p>
+<p>7.Hitung f(x)</p>
+<p>8.Bila f(x).f(a)&lt;0 maka b = x dan f(b)=f(x), bila tidak maka a=x dan f(a)=f(x)</p>
+<p>9.Jika |b-a|&lt; e atau iterasi &gt; iterasi maks maka proses dihentikan dan didapatkan akar x, bila tidak, ulangi langkah 6</p>
+<h2 id="implementasi-metode-bisection-dalam-python"><em>implementasi metode bisection dalam python</em><a class="headerlink" href="#implementasi-metode-bisection-dalam-python" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">bisection</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">N</span><span class="p">):</span>
+
+    <span class="k">if</span> <span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">*</span><span class="n">f</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Bisection method fails.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">None</span>
+    <span class="n">a_n</span> <span class="o">=</span> <span class="n">a</span>
+    <span class="n">b_n</span> <span class="o">=</span> <span class="n">b</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">m_n</span> <span class="o">=</span> <span class="p">(</span><span class="n">a_n</span> <span class="o">+</span> <span class="n">b_n</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+        <span class="n">f_m_n</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">m_n</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">f</span><span class="p">(</span><span class="n">a_n</span><span class="p">)</span><span class="o">*</span><span class="n">f_m_n</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">a_n</span> <span class="o">=</span> <span class="n">a_n</span>
+            <span class="n">b_n</span> <span class="o">=</span> <span class="n">m_n</span>
+        <span class="k">elif</span> <span class="n">f</span><span class="p">(</span><span class="n">b_n</span><span class="p">)</span><span class="o">*</span><span class="n">f_m_n</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">a_n</span> <span class="o">=</span> <span class="n">m_n</span>
+            <span class="n">b_n</span> <span class="o">=</span> <span class="n">b_n</span>
+        <span class="k">elif</span> <span class="n">f_m_n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Found exact solution.&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">m_n</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Bisection method fails.&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="bp">None</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">a_n</span> <span class="o">+</span> <span class="n">b_n</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">5</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">6</span>
+<span class="n">approx_phi</span> <span class="o">=</span> <span class="n">bisection</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mf">2.3</span><span class="p">,</span><span class="mi">25</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">approx_phi</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="mf">1.9999999985098835</span>
+</pre></div>
+
+
+<h4 id="method-regula-falsi">method Regula Falsi<a class="headerlink" href="#method-regula-falsi" title="Permanent link">&para;</a></h4>
+<p><img alt="Image result for algoritma regula falsi" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT6wzj66PhyHwICQ4mQn2n_xJfLKc38mt2gXL1FRA4KKY5G9aCL" /></p>
+<blockquote>
+<p>1.Metode pencarian akar persamaan dengan memanfaatkan kemiringan dan selisih tinggi dari dua titik batas range.</p>
+<p>2.Dua titik a dan b pada fungsi f(x) digunakan untuk mengestimasi posisi c dari akar interpolasi linier.</p>
+<p>3.Dikenal dengan metode False Position</p>
+<p>4.Metode ini juga merupakan penyempurna dari metode bisection</p>
+</blockquote>
+<p><em>algoritma method regula falsi</em></p>
+<ol>
+<li>
+<p>Definisikan fungsi f(x)</p>
+</li>
+<li>
+<p>Tentukan batas bawah (a) dan batas atas (b)</p>
+</li>
+<li>
+<p>Tentukan toleransi error e</p>
+</li>
+<li>
+<p>Hitung f(a) dan f(b)</p>
+</li>
+<li>
+<p>Untuk iterasi 1 s/d n &gt; e :
+   $$
+   c= {(f(b).a -f(a).b)\over (f(b)-f(a))}
+   $$
+   Hitung f(c)=f(x)</p>
+</li>
+</ol>
+<p>​      Hitung error = |f(c)|</p>
+<p>​      Jika f(c).f(a)&lt;0 maka nilai a tetap ,jika tidak maka a=c dan f(a)=f(c)</p>
+<ol>
+<li>Akar persamaanya = c</li>
+</ol>
+<h2 id="implementasi-method-regula-falsi-dalam-python"><em>implementasi method regula falsi dalam python</em><a class="headerlink" href="#implementasi-method-regula-falsi-dalam-python" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="n">error</span> <span class="o">=</span> <span class="mf">0.01</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mf">2.1</span>
+
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">5</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">6</span>
+
+<span class="k">def</span> <span class="nf">regulasi_falsi</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+    <span class="n">i</span><span class="o">=</span><span class="mi">0</span>
+    <span class="n">max_iter</span> <span class="o">=</span> <span class="mi">50</span>
+    <span class="n">iteration</span> <span class="o">=</span> <span class="bp">True</span>
+    <span class="k">while</span> <span class="n">iteration</span> <span class="ow">and</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">max_iter</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">*</span><span class="n">f</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">b</span><span class="p">))</span> <span class="o">+</span> <span class="n">b</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">)))</span> <span class="o">/</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">))</span> <span class="o">+</span> <span class="nb">abs</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">b</span><span class="p">)))</span>
+            <span class="k">if</span> <span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">*</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">b</span> <span class="o">=</span> <span class="n">x</span>
+
+            <span class="k">if</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="n">f</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">a</span> <span class="o">=</span> <span class="n">x</span>
+
+            <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">error</span><span class="p">:</span>
+                <span class="n">iteration</span> <span class="o">=</span> <span class="bp">False</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s1">&#39;tidak di temukan akar&#39;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;x =&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+
+
+<span class="n">regulasi_falsi</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mf">2.000000000174259</span>
+</pre></div>
+
+
+<h4 id="metode-newton-raphson">Metode Newton Raphson<a class="headerlink" href="#metode-newton-raphson" title="Permanent link">&para;</a></h4>
+<p><img alt="Image result for method newton raphson" src="data:image/png;base64,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" /></p>
+<blockquote>
+<p>Metode pencarian akar persamaan dengan memanfaatkan kemiringan dan selisih tinggi dari dua titik batas range.</p>
+<p>Dua titik a dan b pada fungsi f(x) digunakan untuk mengestimasi posisi c dari akar interpolasi linier.</p>
+<p>Dikenal dengan metode False Position</p>
+<p>Metode ini juga merupakan penyempurna dari metode bisection</p>
+</blockquote>
+<p><em>Prinsip Metode Newton Raphson</em></p>
+<blockquote>
+<p>Metode Newton-Raphson adalah metode pencarian akar suatu fungsi f(x) dengan pendekatan satu titik, dimana fungsi f(x) mempunyai turunan. Metode ini dianggap lebih mudah dari Metode Bagi-Dua (Bisection Method) karena metode ini menggunakan pendekatan satu titik sebagai titik awal.</p>
+</blockquote>
+<p><em>prosedur</em></p>
+<ol>
+<li>
+<p>Menentukan x0 sebagai titik awal.</p>
+</li>
+<li>
+<p>Menarik garis lurus (misal garis P) yang menyinggung titik f(x0). Hal ini berakibat garis P memotong sumbu-x di titik x1. </p>
+</li>
+<li>
+<p>Ulangi langkah sebelumnya tapi sekarang x1 dianggap sebagai titik awalnya. </p>
+</li>
+</ol>
+<p>Dari mengulang langkah-langkah sebelumnya akan mendapatkan x1,x2,x3,...,,xn dengan xn yang diperoleh adalah bilangan riil yang merupakan akar atau mendekati akar yang sebenarnya</p>
+<p><em>algoritma</em></p>
+<p><img alt="png" src="https://mohimamwahyudi.github.io/scr.png" /></p>
+<h2 id="implementasi-metode-newton-raphson-python"><em>implementasi Metode Newton Raphson python</em><a class="headerlink" href="#implementasi-metode-newton-raphson-python" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">newton</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">Df</span><span class="p">,</span><span class="n">x0</span><span class="p">,</span><span class="n">epsilon</span><span class="p">,</span><span class="n">max_iter</span><span class="p">):</span>
+
+    <span class="n">xn</span> <span class="o">=</span> <span class="n">x0</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">max_iter</span><span class="p">):</span>
+        <span class="n">fxn</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">xn</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">fxn</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">epsilon</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Found solution after&#39;</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="s1">&#39;iterations.&#39;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">xn</span>
+        <span class="n">Dfxn</span> <span class="o">=</span> <span class="n">Df</span><span class="p">(</span><span class="n">xn</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">Dfxn</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Zero derivative. No solution found.&#39;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="bp">None</span>
+        <span class="n">xn</span> <span class="o">=</span> <span class="n">xn</span> <span class="o">-</span> <span class="n">fxn</span><span class="o">/</span><span class="n">Dfxn</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Exceeded maximum iterations. No solution found.&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="bp">None</span>
+<span class="n">p</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">5</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">6</span>
+<span class="n">Dp</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span> <span class="o">-</span> <span class="mi">5</span> 
+<span class="n">approx</span> <span class="o">=</span> <span class="n">newton</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">Dp</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mf">1e-3</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">approx</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="n">Found</span> <span class="n">solution</span> <span class="n">after</span> <span class="mi">4</span> <span class="n">iterations</span><span class="o">.</span>
+<span class="mf">1.9999847409781035</span>
+</pre></div>
+
+
+<h4 id="metode-secant">Metode Secant<a class="headerlink" href="#metode-secant" title="Permanent link">&para;</a></h4>
+<p><img alt="Image result for secant method" src="data:image/png;base64,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" /></p>
+<blockquote>
+<p>■Metode Newton Raphson memerlukan perhitungan turunan fungsi f’(x).</p>
+<p>■Tidak semua fungsi mudah dicari turunannya terutama fungsi yang bentuknya rumit.</p>
+<p>■Turunan fungsi dapat dihilangkan dengan cara menggantinya dengan bentuk lain yang ekivalen</p>
+<p>■Modifikasi metode Newton Raphson dinamakan metode Secant.</p>
+</blockquote>
+<h5 id="formula-secant">formula secant<a class="headerlink" href="#formula-secant" title="Permanent link">&para;</a></h5>
+<p>$$
+y = \frac{f(b) - f(a)}{b - a}(x - a) + f(a)
+$$</p>
+<p>$$
+0 = \frac{f(b) - f(a)}{b - a}(x - a) + f(a)
+$$</p>
+<p>$$
+x = a - f(a)\frac{b - a}{f(b) - f(a)}
+$$</p>
+<h5 id="algoritma-method-secant">algoritma method secant<a class="headerlink" href="#algoritma-method-secant" title="Permanent link">&para;</a></h5>
+<p>■ Definisikan f(x)</p>
+<p>■ Definisikan toleransi error e dan iterasi maksimum (n)</p>
+<p>■ Masukan dua nilai pendekatan awal yang diantaranya terdapat akar yaitu x_0 dan x_1 ,sebaiknya gunakan metode tabel untuk menjamin titik pendekatanya adalah titik pendekatan yang konvergensinya pada akar persamaan yang diharapkan.</p>
+<p>■ Hitung f(x_0 ) dan fx_1 sebagai y_0 dan y_1</p>
+<p>■ Untuk iterasi 1 s/d n </p>
+<p>x_(i+1)= x_i-(f(xi)(x_i 〖-x〗<em>(i-1)))/(y_i - y</em>(i-1) )</p>
+<p>hitung y_(i+1)=〖f(x〗_(i+1))</p>
+<p>Akar persamaan adalah nilai x yang terakhir</p>
+<h2 id="implementasi-method-secant-pada-python"><em>implementasi method secant pada python</em><a class="headerlink" href="#implementasi-method-secant-pada-python" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">secant</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">N</span><span class="p">):</span>
+
+
+    <span class="k">if</span> <span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">*</span><span class="n">f</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Secant method fails.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">None</span>
+    <span class="n">a_n</span> <span class="o">=</span> <span class="n">a</span>
+    <span class="n">b_n</span> <span class="o">=</span> <span class="n">b</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">m_n</span> <span class="o">=</span> <span class="n">a_n</span> <span class="o">-</span> <span class="n">f</span><span class="p">(</span><span class="n">a_n</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">b_n</span> <span class="o">-</span> <span class="n">a_n</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">b_n</span><span class="p">)</span> <span class="o">-</span> <span class="n">f</span><span class="p">(</span><span class="n">a_n</span><span class="p">))</span>
+        <span class="n">f_m_n</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">m_n</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">f</span><span class="p">(</span><span class="n">a_n</span><span class="p">)</span><span class="o">*</span><span class="n">f_m_n</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">a_n</span> <span class="o">=</span> <span class="n">a_n</span>
+            <span class="n">b_n</span> <span class="o">=</span> <span class="n">m_n</span>
+        <span class="k">elif</span> <span class="n">f</span><span class="p">(</span><span class="n">b_n</span><span class="p">)</span><span class="o">*</span><span class="n">f_m_n</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">a_n</span> <span class="o">=</span> <span class="n">m_n</span>
+            <span class="n">b_n</span> <span class="o">=</span> <span class="n">b_n</span>
+        <span class="k">elif</span> <span class="n">f_m_n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Found exact solution.&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">m_n</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Secant method fails.&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="bp">None</span>
+    <span class="k">return</span> <span class="n">a_n</span> <span class="o">-</span> <span class="n">f</span><span class="p">(</span><span class="n">a_n</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">b_n</span> <span class="o">-</span> <span class="n">a_n</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">b_n</span><span class="p">)</span> <span class="o">-</span> <span class="n">f</span><span class="p">(</span><span class="n">a_n</span><span class="p">))</span>
+
+<span class="n">p</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">5</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">6</span>
+<span class="n">approx</span> <span class="o">=</span> <span class="n">secant</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mf">2.4</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">approx</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="mf">2.0000003178913373</span>
+</pre></div>
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$$','$$'],['$','$']]}
+});
+</script>
+
+<p><script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../MeasuringError/" title="Measuring Error" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Measuring Error
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../gaus/" title="Elimination Gauss" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Elimination Gauss
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 - 2021 Rizaldi Febri Agil Prasetya
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/PrasetyaAldi/" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.c648116f.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>
