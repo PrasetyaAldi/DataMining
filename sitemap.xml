@@ -2,20 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://prasetyaaldi.github.io/datamining/StatistikDesc/</loc>
-<<<<<<< HEAD
-     <lastmod>2020-03-18</lastmod>
-=======
-     <lastmod>2020-03-12</lastmod>
->>>>>>> 14c4c9e84796b6061a55cbaa2b61755545c661cb
+     <lastmod>2020-03-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://prasetyaaldi.github.io/datamining/MengukurJaral/</loc>
-<<<<<<< HEAD
-     <lastmod>2020-03-18</lastmod>
-=======
-     <lastmod>2020-03-12</lastmod>
->>>>>>> 14c4c9e84796b6061a55cbaa2b61755545c661cb
+     <lastmod>2020-03-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
@@ -25,52 +17,37 @@
     </url>
     <url>
      <loc>https://prasetyaaldi.github.io/datamining/Weighted K-Nearest Neighbor/</loc>
-<<<<<<< HEAD
-     <lastmod>2020-03-18</lastmod>
-=======
-     <lastmod>2020-03-12</lastmod>
->>>>>>> 14c4c9e84796b6061a55cbaa2b61755545c661cb
+     <lastmod>2020-03-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://prasetyaaldi.github.io/datamining/fuzzy_c_means/</loc>
-<<<<<<< HEAD
-     <lastmod>2020-03-18</lastmod>
-=======
-     <lastmod>2020-03-12</lastmod>
->>>>>>> 14c4c9e84796b6061a55cbaa2b61755545c661cb
+     <lastmod>2020-03-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://prasetyaaldi.github.io/datamining/MeasuringError/</loc>
-<<<<<<< HEAD
-     <lastmod>2020-03-18</lastmod>
-=======
-     <lastmod>2020-03-12</lastmod>
->>>>>>> 14c4c9e84796b6061a55cbaa2b61755545c661cb
+     <lastmod>2020-03-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://prasetyaaldi.github.io/datamining/NumericalSolution/</loc>
-<<<<<<< HEAD
-     <lastmod>2020-03-18</lastmod>
+     <lastmod>2020-03-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://prasetyaaldi.github.io/datamining/gaus/</loc>
-     <lastmod>2020-03-18</lastmod>
-=======
-     <lastmod>2020-03-12</lastmod>
->>>>>>> 14c4c9e84796b6061a55cbaa2b61755545c661cb
+     <lastmod>2020-03-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://prasetyaaldi.github.io/datamining/Romberg/</loc>
+     <lastmod>2020-03-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://prasetyaaldi.github.io/datamining/</loc>
-<<<<<<< HEAD
-     <lastmod>2020-03-18</lastmod>
-=======
-     <lastmod>2020-03-12</lastmod>
->>>>>>> 14c4c9e84796b6061a55cbaa2b61755545c661cb
+     <lastmod>2020-03-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
