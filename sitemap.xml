@@ -2,12 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://prasetyaaldi.github.io/datamining/StatistikDesc/</loc>
-     <lastmod>2020-03-19</lastmod>
+     <lastmod>2020-04-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://prasetyaaldi.github.io/datamining/MengukurJaral/</loc>
-     <lastmod>2020-03-19</lastmod>
+     <lastmod>2020-04-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
@@ -17,37 +17,42 @@
     </url>
     <url>
      <loc>https://prasetyaaldi.github.io/datamining/Weighted K-Nearest Neighbor/</loc>
-     <lastmod>2020-03-19</lastmod>
+     <lastmod>2020-04-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://prasetyaaldi.github.io/datamining/fuzzy_c_means/</loc>
-     <lastmod>2020-03-19</lastmod>
+     <lastmod>2020-04-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://prasetyaaldi.github.io/datamining/MeasuringError/</loc>
-     <lastmod>2020-03-19</lastmod>
+     <lastmod>2020-04-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://prasetyaaldi.github.io/datamining/NumericalSolution/</loc>
-     <lastmod>2020-03-19</lastmod>
+     <lastmod>2020-04-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://prasetyaaldi.github.io/datamining/gaus/</loc>
-     <lastmod>2020-03-19</lastmod>
+     <lastmod>2020-04-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://prasetyaaldi.github.io/datamining/Romberg/</loc>
-     <lastmod>2020-03-19</lastmod>
+     <lastmod>2020-04-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://prasetyaaldi.github.io/datamining/extrapolation/</loc>
+     <lastmod>2020-04-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://prasetyaaldi.github.io/datamining/</loc>
-     <lastmod>2020-03-19</lastmod>
+     <lastmod>2020-04-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
